@@ -1,0 +1,34 @@
+# sem-cli default configuration
+[analysis]
+default_profile = "full"
+history_depth = 1000
+include_tests = true
+include_generated = false
+follow_symlinks = false
+max_file_size_mb = 10
+
+[repository]
+clone_timeout_seconds = 600
+max_repository_size_mb = 1000
+max_files = 100000
+retain_clone = false
+cache_enabled = false
+
+[metrics]
+complexity_threshold = 10
+hotspot_window_days = 90
+
+[security]
+enabled = true
+scan_secrets = true
+scan_dependencies = true
+redact_secrets = true
+
+[ai]
+enabled = false
+provider = "gemini"
+send_source_code = false
+model = "gemini-2.5-flash"
+
+[reporting]
+default_format = "markdown"
