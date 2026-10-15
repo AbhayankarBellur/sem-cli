@@ -18,6 +18,8 @@
 - **Reproducible:** Measurements are pinned to exact 40-character Git commit SHAs and recorded in local SQLite database snapshots.
 - **Privacy & Security:** Full source code is never sent to Gemini by default; sensitive tokens and credentials are automatically redacted.
 
+> 📖 **Deep Dive Documentation:** For complete architectural diagrams, mathematical metric formulations, AST parsers, and command-by-command internal execution flows, see the [Technical Implementation Guide](TECHNICAL_GUIDE.md).
+
 ---
 
 ## 2. Architecture & Design

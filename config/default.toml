@@ -28,7 +28,7 @@ redact_secrets = true
 enabled = false
 provider = "gemini"
 send_source_code = false
-model = "gemini-2.5-flash"
+model = "gemini-3.8-flash"
 
 [reporting]
 default_format = "markdown"
