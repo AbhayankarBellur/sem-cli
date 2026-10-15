@@ -1,6 +1,6 @@
 # sem-cli: Detailed Technical Implementation Guide
 
-This guide provides an in-depth technical analysis of **`sem-cli` (Software Engineering Metrics & Intelligence CLI)**. It explains the design principles, internal abstractions, mathematical algorithms, AST parsers, database schema, and operational mechanics for every command in the suite.
+This guide provides an in-depth technical analysis of **`sem-cli` / EngiScope (Software Engineering Metrics & Intelligence CLI)** (published on PyPI as [`engiscope`](https://pypi.org/project/engiscope/), CLI entrypoint: `sem`). It explains the design principles, internal abstractions, mathematical algorithms, AST parsers, database schema, and operational mechanics for every command in the suite.
 
 ---
 

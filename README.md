@@ -1,7 +1,12 @@
-# sem-cli — Software Engineering Metrics & Intelligence CLI
+# EngiScope (`sem-cli`) — Software Engineering Metrics & Intelligence CLI
+
+[![PyPI version](https://img.shields.io/pypi/v/engiscope.svg)](https://pypi.org/project/engiscope/)
+[![Python versions](https://img.shields.io/pypi/pyversions/engiscope.svg)](https://pypi.org/project/engiscope/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > **Course:** ISWE402L – Software Metrics  
 > **Product:** Software Engineering Metrics Ingestion, Analysis, and Decision Support Platform  
+> **PyPI Package:** [`engiscope`](https://pypi.org/project/engiscope/) | **CLI Command:** `sem`  
 > **Interface:** Terminal-based, Unicode TUI inspired by Claude Code  
 > **Provider:** Google Gemini API (optional, offline-first fallback)
 
@@ -9,7 +14,7 @@
 
 ## 1. Product Overview
 
-`sem-cli` transforms Git repositories into an evidence-grounded software engineering analytics environment directly from your terminal. It measures source code, mines Git history, audits quality and security, calculates empirical distributions and correlations, ranks engineering hotspots, and optionally provides Gemini AI-powered business and architectural insights.
+`sem-cli` (distributed as **`engiscope`** on PyPI) transforms Git repositories into an evidence-grounded software engineering analytics environment directly from your terminal. It measures source code, mines Git history, audits quality and security, calculates empirical distributions and correlations, ranks engineering hotspots, and optionally provides Gemini AI-powered business and architectural insights.
 
 ### Core Principles
 - **Local-first:** Runs entirely on the user's workstation without requiring cloud databases, Docker, or Redis.
@@ -22,10 +27,30 @@
 
 ---
 
-## 2. Architecture & Design
+## 2. Installation & Quickstart
+
+Install directly from PyPI via `pip`:
+
+```bash
+pip install engiscope
+```
+
+Verify your installation:
+
+```bash
+# Check version and doctor diagnostics
+sem --version
+sem doctor
+```
+
+*(For development or contributing from source: `pip install -e ".[dev]"`)*
+
+---
+
+## 3. Architecture & Design
 
 ```
-sem-cli
+engiscope (sem-cli)
 ├── CLI Layer           (Typer, Rich, interactive TUI, Claude Code styling)
 ├── Services Layer      (Analysis orchestration, history mining, reports, AI)
 ├── Ingestion Engine    (Git client, clone manager, revision resolver, inventory)
@@ -37,7 +62,7 @@ sem-cli
 
 ---
 
-## 3. Complete Software Metrics Catalogue
+## 4. Complete Software Metrics Catalogue
 
 | Category | Metric | Scope | Unit | Definition & Implementation |
 |---|---|---|---|---|
@@ -69,7 +94,7 @@ sem-cli
 
 ---
 
-## 4. Hotspot Prioritization Model
+## 5. Hotspot Prioritization Model
 
 To prioritize technical debt without pretending to predict defects without training data, `sem-cli` computes:
 
@@ -82,7 +107,7 @@ Where:
 
 ---
 
-## 5. CLI Command Reference
+## 6. CLI Command Reference
 
 ### Interactive Workspace
 ```bash
@@ -149,7 +174,7 @@ sem init
 
 ---
 
-## 6. Exit Codes
+## 7. Exit Codes
 
 | Code | Meaning |
 |---|---|
@@ -164,7 +189,7 @@ sem init
 
 ---
 
-## 7. Gemini AI Integration & Guardrails
+## 8. Gemini AI Integration & Guardrails
 
 - Configured via environment variable: `export GEMINI_API_KEY="your-api-key"`.
 - **Offline by Default:** Complete metrics, hotspots, statistics, and reports operate offline without an API key.

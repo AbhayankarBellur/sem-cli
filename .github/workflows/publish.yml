@@ -1,4 +1,4 @@
-name: Publish sem-cli to PyPI
+name: Publish EngiScope to PyPI
 
 on:
   release:
@@ -41,8 +41,5 @@ jobs:
         run: |
           twine check dist/*
 
-      - name: Publish to PyPI
+      - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          # Uses OIDC Trusted Publishing (or fallback PYPI_API_TOKEN secret if configured)
-          password: ${{ secrets.PYPI_API_TOKEN }}
