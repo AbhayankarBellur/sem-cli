@@ -10,9 +10,21 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [
-    {name = "ISWE402L Engineering Metrics Team"}
+    {name = "Abhayankar Bellur", email = "abhayankar@example.com"}
 ]
 keywords = ["software-metrics", "static-analysis", "git-mining", "cli", "tui", "gemini"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Operating System :: OS Independent",
+]
 dependencies = [
     "typer>=0.12.0",
     "rich>=13.0.0",
@@ -24,10 +36,18 @@ dependencies = [
     "google-genai>=0.1.0",
 ]
 
+[project.urls]
+Homepage = "https://github.com/AbhayankarBellur/sem-cli"
+Repository = "https://github.com/AbhayankarBellur/sem-cli"
+Issues = "https://github.com/AbhayankarBellur/sem-cli/issues"
+Documentation = "https://github.com/AbhayankarBellur/sem-cli/blob/main/README.md"
+
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0.0",
     "pytest-cov>=4.1.0",
+    "build>=1.0.0",
+    "twine>=5.0.0",
 ]
 
 [project.scripts]
@@ -35,6 +55,9 @@ sem = "sem_cli.main:run_cli"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"sem_cli.persistence" = ["*.sql"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
